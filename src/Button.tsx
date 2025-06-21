@@ -1,13 +1,14 @@
 
 type ButtonProps = {
-    aumentar: () => void; //No recibe ningun parametro
+    label: string,
+    onClick: () => void
 }
 
-export const Button = ({aumentar}:ButtonProps) => {
+export const Button = ({label, onClick}:ButtonProps) => {
 
   return (
     <div>
-        <button onClick = {aumentar}>Increase</button>
+        <button onClick = {onClick}>{label}</button>
     </div>
   )
 }
